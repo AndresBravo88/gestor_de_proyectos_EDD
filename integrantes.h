@@ -14,3 +14,11 @@ int agregarIntegrante(Proyecto *p, Usuario *u);
 /* Quita al usuario del proyecto (ambas listas) y deja sin responsable sus tareas.
  * Devuelve 0 si ok, 1 si no era integrante, 2 si es el creador (no se puede eliminar). */
 int eliminarIntegrante(Proyecto *p, Usuario *u);
+
+/* Muestra los integrantes de un proyecto, indicando cual es el creador. */
+void listarIntegrantes(const Proyecto *p);
+
+/* Submenu: ver / agregar / eliminar integrantes. */
+void menuIntegrantes(Proyecto *p);
+
+#endif
