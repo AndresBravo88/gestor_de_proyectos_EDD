@@ -4,7 +4,7 @@
 #include "proyectos.h"
 #include "integrantes.h"
 #include "estado.h"
-#include "utilidades.h"
+
 
 unsigned hashEntero(int id) {
   return (unsigned)id % TAM_MAPA;
@@ -45,6 +45,12 @@ Proyecto *crearProyecto(Usuario *creador, const char *nombre, const char *descri
 }
 }
 void listarProyectos(const Usuario *u) {
-    (void)u;
-    noImplementado("listarProyectos"); // falta implementar, solo esta agregada para luego hacerla como corresponde
+  if (!u) return;
+      printf("\n=== PROYECTOS DE %s ===\n", u->username);
+      if (!u->proyectos) {
+          printf("   (no participas en ningun proyecto)\n");
+          return;
+      }
+      for (NodoProyecto *n = u->proyectos; n; n = n->sig)
+          printf("   [ID %d] %-24s %s\n", n->proyecto->id, n->proyecto->nombre, n->proyecto->descripcion);
 }
