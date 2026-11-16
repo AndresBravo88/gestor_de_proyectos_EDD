@@ -15,7 +15,6 @@ make          # genera ./gestor
 make clean
 ```
 
-Para detectar fugas de memoria: `valgrind --leak-check=full ./gestor`
 
 ## Estructura
 
