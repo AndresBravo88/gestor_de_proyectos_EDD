@@ -1,4 +1,4 @@
-# Gestor Colaborativo de Proyectos (versión completa)
+# Gestor Colaborativo de Proyectos
 
 Aplicación de consola en C (Estructuras de Datos). Permite registrar usuarios, crear proyectos,
 administrar integrantes y gestionar tareas con un tablero Kanban.
